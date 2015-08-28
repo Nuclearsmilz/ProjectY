@@ -40,7 +40,7 @@ public GameClass () {
 	Dimension size = new Dimension (width*scale,height*scale);
 	setPreferredSize(size);
 	
-	screen =new Screen(width, height);
+	screen = new Screen(width, height);
 	
 	
 	
