@@ -10,6 +10,7 @@ import java.awt.image.DataBufferInt;
 import javax.swing.JFrame;
 
 import main.java.ProjectY.graphics.Screen;
+import main.java.ProjectY.input.Keyboard;
 
 public class ProjectY extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
@@ -22,7 +23,8 @@ public class ProjectY extends Canvas implements Runnable {
 	
 	private Thread thread;
 	private JFrame frame;
-	private boolean running = false;
+	private Keyboard key;
+	private boolean running = true;
 	
 	private Screen screen;
 	
@@ -35,8 +37,10 @@ public class ProjectY extends Canvas implements Runnable {
 		setPreferredSize(size);
 		
 		screen = new Screen(width, height);
-		
 		frame = new JFrame();
+		key = new Keyboard();
+		
+		addKeyListener(key);
 	}
 	
 	public synchronized void start() {
