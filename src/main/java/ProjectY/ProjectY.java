@@ -64,29 +64,30 @@ public class ProjectY extends Canvas implements Runnable {
 		final double ns = 1000000000.0 / 60.0;
 		double delta = 0;
 		int frames = 0;
-		int updates = 0;
+		int ticks = 0;
 		
+		requestFocus();
 		while (running) {
 			long now = System.nanoTime();
 			delta += (now - lastTime) / ns;
 			lastTime = now;
 			while (delta >= 1) {
 				update();
-				updates++;
+				ticks++;
 				delta--;
 			}
-			
 			render();
 			frames++;
 			
 			if (System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
-				System.out.println(updates + "ups," + frames + "fps");
-				frame.setTitle(title + "  |  " + updates + "ups," + frames + "fps");
+				System.out.println(ticks + " ups, " + frames + " fps");
+				frame.setTitle(title + "  |  " + ticks + " ups, " + frames + " fps");
+				ticks = 0;
 				frames = 0;
-				updates = 0;
 			}
 		}
+		stop();
 	}
 	
 	public void update() {
