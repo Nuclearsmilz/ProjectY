@@ -5,7 +5,7 @@ import java.util.Random;
 public class Screen {
 	
 	private int width, height;
-	int x,y;
+	int x, y;
 	public int[] pixels;
 	public final int MAP_SIZE = 64;
 	public final int MAP_SIZE_MASK = MAP_SIZE - 1;
@@ -31,11 +31,10 @@ public class Screen {
 	}
 	
 	public void render() {
-		
 		for (int y = 0; y < height; y++) {
-			if (y < 0 || y>= height) break;			
+			if (y < 0 || y >= height) break;			
 			for (int x = 0; x < width; x++) {
-				if (x < 0 || s  x >= width) break;
+				if (x < 0 || x >= width) break;
 			}
 		}
 	}

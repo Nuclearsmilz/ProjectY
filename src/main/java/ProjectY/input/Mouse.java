@@ -52,5 +52,3 @@ public class Mouse extends MouseAdapter {
 		return y;
 	}
 }
-
-}
