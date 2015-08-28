@@ -10,7 +10,7 @@ import java.awt.image.DataBufferInt;
 
 import javax.swing.JFrame;
 
-import com.FirstGame.Main.graphics.Screen;
+import main.java.ProjectY.graphics.*;
 
 public class GameClass extends Canvas implements Runnable {
 
