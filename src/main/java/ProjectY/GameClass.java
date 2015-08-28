@@ -1,7 +1,6 @@
 package main.java.ProjectY;
 
 import java.awt.Canvas;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
@@ -10,7 +9,7 @@ import java.awt.image.DataBufferInt;
 
 import javax.swing.JFrame;
 
-import main.java.ProjectY.graphics.*;
+import main.java.ProjectY.graphics.Screen;
 
 public class GameClass extends Canvas implements Runnable {
 
@@ -23,7 +22,7 @@ public static int width = 300;
 public static int height = width / 16 *9 ;
 public static int scale = 3;
 
-public static String title = "First Game";
+public static String title = "ProjectY";
 
 private Thread thread;
 private JFrame frame;

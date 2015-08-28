@@ -2,7 +2,7 @@ package main.java.ProjectY.graphics;
 
 import java.util.Random;
 
-public class Graphics {
+public class Screen {
 
 	private int width, height;
 	public int [] pixels;
@@ -14,7 +14,7 @@ public class Graphics {
 	private Random random = new Random();
 	
 	
-	public Graphics(int width, int height) {
+	public Screen(int width, int height) {
 		this.width = width;
 		this.height = height;
 		pixels = new int [width * height] ;
