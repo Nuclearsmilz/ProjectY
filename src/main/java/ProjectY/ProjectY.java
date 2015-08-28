@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 
 import main.java.ProjectY.graphics.Screen;
 
-public class GameClass extends Canvas implements Runnable {
+public class ProjectY extends Canvas implements Runnable {
 
 /**
 	 * 
@@ -35,7 +35,7 @@ private Screen screen;
 private BufferedImage Image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 private int [] pixels =  ((DataBufferInt) Image.getRaster().getDataBuffer()).getData();
 
-public GameClass () {
+public ProjectY () {
 	
 	Dimension size = new Dimension (width*scale,height*scale);
 	setPreferredSize(size);
@@ -126,7 +126,7 @@ public synchronized void start() {
 	public static void main (String[]  args) {
 		
 		
-		GameClass game = new GameClass();
+		ProjectY game = new ProjectY();
 		game.frame.setResizable(false);
 		game.frame.setTitle(game.title);
 		game.frame.add(game);
