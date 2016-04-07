@@ -120,7 +120,7 @@ public class ProjectY extends Canvas implements Runnable {
 		
 		ProjectY game = new ProjectY();
 		game.frame.setResizable(false);
-		game.frame.setTitle(game.title);
+		game.frame.setTitle(ProjectY.title);
 		game.frame.add(game);
 		game.frame.pack();
 		game.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
