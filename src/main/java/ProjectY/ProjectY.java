@@ -1,18 +1,13 @@
 package main.java.ProjectY;
 
 ///edit here
+import java.awt.*;
+import java.awt.image.*;
 
-import java.awt.Canvas;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferInt;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-
-import main.java.ProjectY.graphics.Screen;
-import main.java.ProjectY.input.Keyboard;
+import main.java.ProjectY.graphics.*;
+import main.java.ProjectY.input.*;
 
 public class ProjectY extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
