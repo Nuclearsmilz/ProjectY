@@ -1,7 +1,6 @@
 package main.java.ProjectY.input;
 
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class Mouse extends MouseAdapter {
 	private static int x, y;
@@ -15,32 +14,31 @@ public class Mouse extends MouseAdapter {
 
 	private static double scale = 1.0;
 
-	public Mouse() {
-	}
+	public Mouse() {}
 
 	public Mouse(double scale) {
 		Mouse.scale = scale;
 	}
 
-	public void mousePressed(MouseEvent e) {
+	public void mousePressed( MouseEvent e ) {
 		button = e.getButton();
 	}
 
-	public void mouseReleased(MouseEvent e) {
+	public void mouseReleased( MouseEvent e ) {
 		button = -1;
 	}
 
-	public void mouseMoved(MouseEvent e) {
+	public void mouseMoved( MouseEvent e ) {
 		x = (int) (e.getX() / scale / scale);
 		y = (int) (e.getY() / scale / scale);
 	}
 
-	public void mouseDragged(MouseEvent e) {
+	public void mouseDragged( MouseEvent e ) {
 		x = (int) (e.getX() / scale / scale);
 		y = (int) (e.getY() / scale / scale);
 	}
 
-	public static boolean buttonDown(int button) {
+	public static boolean buttonDown( int button ) {
 		return Mouse.button == button;
 	}
 
